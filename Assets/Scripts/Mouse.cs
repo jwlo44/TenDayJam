@@ -5,34 +5,40 @@ using UnityEngine;
 
 public class Mouse : MonoBehaviour
 {
-    Vector2 _mousePosition;
-    float _mouseX;
-    float _mouseY;
-
-    Vector3 _handPosition;
-
+    [SerializeField] float _distanceFromObject;
+    [SerializeField] float _maxDistanceFromCamera;
+    
     Camera _camera;
+    float _depth;
+    RaycastHit _hit;
+    Ray _ray;
 
     void Start()
     {
         _camera = Camera.main;
+        if (_distanceFromObject == 0)
+        {
+            _distanceFromObject = 2;
+        }
+
+        _depth = _distanceFromObject;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        _mousePosition = Input.mousePosition;
+        UpdateDepth();
+        transform.position = GetWorldPosition(_camera, _depth);;
+    }
 
-        //if (Input.GetMouseButtonDown(0))
-        //{
-            /*
-            _mouseX = _mousePosition.x;
-            _mouseY = _mousePosition.y;
-            Debug.Log($"Mouse X: {_mouseX}, Mouse Y: {_mouseY}");
-            */
+    void UpdateDepth()
+    {
+        // Raycast, determine distance from camera to object, pull it back a bit by _distanceFromObject
+        _ray = _camera.ScreenPointToRay(Input.mousePosition);
 
-            _handPosition = GetWorldPosition(_camera, 2);
-            transform.position = _handPosition;
-        //}
+        if (Physics.Raycast(_ray, out _hit) && _hit.transform != this.transform)
+        {
+            _depth = _hit.distance - _distanceFromObject;
+        }
     }
 
     Vector2 GetBoundedScreenPosition()
