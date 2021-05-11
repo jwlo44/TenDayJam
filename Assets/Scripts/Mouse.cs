@@ -35,7 +35,7 @@ public class Mouse : MonoBehaviour
         // Raycast, determine distance from camera to object, pull it back a bit by _distanceFromObject
         _ray = _camera.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(_ray, out _hit) && _hit.transform != this.transform)
+        if (Physics.Raycast(_ray, out _hit))
         {
             _depth = _hit.distance - _distanceFromObject;
         }
