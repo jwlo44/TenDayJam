@@ -7,6 +7,7 @@ public class Hiker : MonoBehaviour
 {
     [SerializeField] float _hikeSpeed;
     [SerializeField] float _maxHeight;
+    [SerializeField] Transform _mountainTop;
 
     void Start()
     {
@@ -18,8 +19,8 @@ public class Hiker : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(ShouldGoUp())
-            transform.Translate(Time.deltaTime * _hikeSpeed * Vector3.up);
+        if (ShouldGoUp())
+            GoStraightUp();
     }
 
     bool ShouldGoUp()
@@ -28,4 +29,15 @@ public class Hiker : MonoBehaviour
             return true;
         return false;
     }
+
+    void GoStraightUp()
+    {
+        transform.Translate(Time.deltaTime * _hikeSpeed * Vector3.up);
+    }
+
+    void GoUpTheMountain()
+    {
+        
+    }
+    
 }
