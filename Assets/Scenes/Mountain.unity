@@ -429,18 +429,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2888958119015163165, guid: b2133725a6b3e4b42b0e0ca41cbda562, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2888958119015163165, guid: b2133725a6b3e4b42b0e0ca41cbda562, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2888958119015163165, guid: b2133725a6b3e4b42b0e0ca41cbda562, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2888958119015163165, guid: b2133725a6b3e4b42b0e0ca41cbda562, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.57074
       objectReference: {fileID: 0}
@@ -493,6 +481,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7527505784964319918, guid: 280f9c3cc442c1e4b9d243e58027ce40, type: 3}
+      propertyPath: _distanceFromObject
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7527505784964319919, guid: 280f9c3cc442c1e4b9d243e58027ce40, type: 3}
       propertyPath: m_Name
       value: God Hand

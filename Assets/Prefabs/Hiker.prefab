@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2888958119015163165}
   - component: {fileID: 7047252241083843055}
+  - component: {fileID: 6169764501939042249}
   m_Layer: 0
   m_Name: Hiker
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1559243436383854021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 6870709455544085237}
   m_Father: {fileID: 0}
@@ -47,6 +48,20 @@ MonoBehaviour:
   _hikeSpeed: 0
   _maxHeight: 0
   _mountainTop: {fileID: 0}
+--- !u!136 &6169764501939042249
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559243436383854021}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &6400477798865177886
 PrefabInstance:
   m_ObjectHideFlags: 0
