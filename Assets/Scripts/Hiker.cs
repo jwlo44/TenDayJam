@@ -19,7 +19,7 @@ public class Hiker : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (ShouldGoUp())
+        //if (ShouldGoUp())
             GoUpTheMountain();
     }
 

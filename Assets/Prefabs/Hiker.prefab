@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2888958119015163165}
+  - component: {fileID: 7047252241083843055}
   m_Layer: 0
   m_Name: Hiker
   m_TagString: Untagged
@@ -31,6 +32,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7047252241083843055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559243436383854021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56cb1e5a54833940a4c51d9b87ebd84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hikeSpeed: 0
+  _maxHeight: 0
+  _mountainTop: {fileID: 0}
 --- !u!1001 &6400477798865177886
 PrefabInstance:
   m_ObjectHideFlags: 0
