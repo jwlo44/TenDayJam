@@ -20,7 +20,7 @@ public class Hiker : MonoBehaviour
     void FixedUpdate()
     {
         if (ShouldGoUp())
-            GoStraightUp();
+            GoUpTheMountain();
     }
 
     bool ShouldGoUp()
@@ -37,7 +37,6 @@ public class Hiker : MonoBehaviour
 
     void GoUpTheMountain()
     {
-        
+        transform.position = Vector3.MoveTowards(transform.position, _mountainTop.position, _hikeSpeed * Time.deltaTime);
     }
-    
 }
