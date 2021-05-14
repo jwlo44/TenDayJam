@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6169764501939042249}
   m_Layer: 0
   m_Name: Hiker
-  m_TagString: Untagged
+  m_TagString: Hiker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hikeSpeed: 0
-  _maxHeight: 0
   _mountainTop: {fileID: 0}
 --- !u!136 &6169764501939042249
 CapsuleCollider:

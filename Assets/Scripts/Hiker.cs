@@ -6,9 +6,10 @@ using UnityEngine;
 public class Hiker : MonoBehaviour
 {
     [SerializeField] float _hikeSpeed;
-    [SerializeField] float _maxHeight;
     [SerializeField] Transform _mountainTop;
 
+    float _timeUntilMoveAgain = 0f;
+    
     void Start()
     {
         if (_hikeSpeed <= 0)
@@ -17,26 +18,34 @@ public class Hiker : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (_timeUntilMoveAgain > 0)
+            _timeUntilMoveAgain -= Time.deltaTime;
+    }
+
     void FixedUpdate()
     {
-        //if (ShouldGoUp())
+        if (ShouldGoUp())
             GoUpTheMountain();
     }
 
     bool ShouldGoUp()
     {
-        if (transform.position.y < _maxHeight)
+        if (_timeUntilMoveAgain <= 0)
             return true;
+        
         return false;
-    }
-
-    void GoStraightUp()
-    {
-        transform.Translate(Time.deltaTime * _hikeSpeed * Vector3.up);
     }
 
     void GoUpTheMountain()
     {
         transform.position = Vector3.MoveTowards(transform.position, _mountainTop.position, _hikeSpeed * Time.deltaTime);
     }
+
+    public void SlapMe(float seconds)
+    {
+        _timeUntilMoveAgain = seconds;
+    }
+    
 }

@@ -110,3 +110,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _distanceFromObject: 0.5
   _maxDistanceFromCamera: 0
+  _slapStunDuration: 1

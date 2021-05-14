@@ -7,6 +7,7 @@ public class Mouse : MonoBehaviour
 {
     [SerializeField] float _distanceFromObject;
     [SerializeField] float _maxDistanceFromCamera;
+    [SerializeField] float _slapStunDuration;
     
     Camera _camera;
     float _depth;
@@ -21,18 +22,38 @@ public class Mouse : MonoBehaviour
             _distanceFromObject = 2;
         }
 
+        if (_slapStunDuration <= 0)
+        {
+            _slapStunDuration = 2;
+        }
+
         _depth = _distanceFromObject;
+    }
+
+    void Update()
+    {
+        // Check to see if you are clicking on a hiker
+        if (Input.GetMouseButtonDown(0))
+        {
+            _ray = _camera.ScreenPointToRay(Input.mousePosition);
+            if (_hit.collider.gameObject.CompareTag("Hiker"))
+            {
+                Hiker hiker = _hit.collider.GetComponent<Hiker>();
+                hiker.SlapMe(_slapStunDuration);
+
+                Debug.Log("Clicked on a hiker");
+            }
+        }
     }
 
     void FixedUpdate()
     {
         UpdateDepth();
-        transform.position = GetWorldPosition(_camera, _depth);;
+        transform.position = GetWorldPosition(_camera, _depth);
     }
 
     void UpdateDepth()
     {
-        // Raycast, determine distance from camera to object, pull it back a bit by _distanceFromObject
         _ray = _camera.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(_ray, out _hit))
@@ -55,11 +76,4 @@ public class Mouse : MonoBehaviour
         Vector3 screenPosWithDepth = new Vector3(screenPos.x, screenPos.y, worldDepth);
         return camera.ScreenToWorldPoint(screenPosWithDepth);
     }
-
-    Vector3 GetWorldPosition(Camera camera)
-    {
-        Debug.Log(camera.nearClipPlane);
-        return GetWorldPosition(camera, camera.nearClipPlane);
-    }
-    
 }
