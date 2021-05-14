@@ -16,6 +16,9 @@ public class Mouse : MonoBehaviour
 
     void Start()
     {
+        // Turn off cursor when G O D H A N D is in town
+        
+        
         _camera = Camera.main;
         if (_distanceFromObject == 0)
         {
@@ -44,6 +47,13 @@ public class Mouse : MonoBehaviour
                 Debug.Log("Clicked on a hiker");
             }
         }
+
+        // Toggle cursor 
+        if (Input.GetKeyDown("space"))
+        {
+            Cursor.visible = !Cursor.visible;
+        }
+        
     }
 
     void FixedUpdate()
