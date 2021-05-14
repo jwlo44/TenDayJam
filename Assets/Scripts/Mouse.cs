@@ -16,9 +16,6 @@ public class Mouse : MonoBehaviour
 
     void Start()
     {
-        // Turn off cursor when G O D H A N D is in town
-        
-        
         _camera = Camera.main;
         if (_distanceFromObject == 0)
         {

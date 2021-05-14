@@ -8,6 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -15,6 +16,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MouseOver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Hiker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Mouse.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sJQvmjhWXm6KYG9obVFTYpNqvJ" />
