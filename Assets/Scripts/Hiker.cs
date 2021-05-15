@@ -21,7 +21,7 @@ public class Hiker : MonoBehaviour
     void Update()
     {
         if (_timeUntilMoveAgain > 0)
-            _timeUntilMoveAgain -= Time.deltaTime;
+            _timeUntilMoveAgain -= PauseTimeManager.deltaTime;
     }
 
     void FixedUpdate()
@@ -32,15 +32,12 @@ public class Hiker : MonoBehaviour
 
     bool ShouldGoUp()
     {
-        if (_timeUntilMoveAgain <= 0)
-            return true;
-        
-        return false;
+        return _mountainTop != null && _timeUntilMoveAgain <= 0;
     }
 
     void GoUpTheMountain()
     {
-        transform.position = Vector3.MoveTowards(transform.position, _mountainTop.position, _hikeSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, _mountainTop.position, _hikeSpeed * PauseTimeManager.deltaTime);
     }
 
     public void SlapMe(float seconds)
