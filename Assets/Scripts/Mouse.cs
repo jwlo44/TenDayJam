@@ -36,21 +36,14 @@ public class Mouse : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _ray = _camera.ScreenPointToRay(Input.mousePosition);
-            if (_hit.collider.gameObject.CompareTag("Hiker"))
+            if (_hit.collider != null &&_hit.collider.gameObject.CompareTag("Hiker"))
             {
                 Hiker hiker = _hit.collider.GetComponent<Hiker>();
                 hiker.SlapMe(_slapStunDuration);
 
                 Debug.Log("Clicked on a hiker");
             }
-        }
-
-        // Toggle cursor 
-        if (Input.GetKeyDown("space"))
-        {
-            Cursor.visible = !Cursor.visible;
-        }
-        
+        }        
     }
 
     void FixedUpdate()

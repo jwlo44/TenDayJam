@@ -24,7 +24,7 @@ public class Spawner : MonoBehaviour
         if(ShouldSpawn())
             SpawnHiker();
 
-        _countdownToSpawn -= Time.deltaTime;
+        _countdownToSpawn -= PauseTimeManager.deltaTime;
     }
 
     bool ShouldSpawn()
