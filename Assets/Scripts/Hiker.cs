@@ -7,11 +7,16 @@ public class Hiker : MonoBehaviour
 {
     [SerializeField] float _hikeSpeed;
     [SerializeField] Transform _mountainTop;
+    [SerializeField] AudioClip _slapReact;
+    [SerializeField] AudioClip _spawn;
 
+    AudioSource _audioSource;
     float _timeUntilMoveAgain = 0f;
     
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.clip = _spawn;
         if (_hikeSpeed <= 0)
         {
             _hikeSpeed = 1;
@@ -42,6 +47,8 @@ public class Hiker : MonoBehaviour
 
     public void SlapMe(float seconds)
     {
+        _audioSource.clip = _slapReact;
+        _audioSource.Play();
         _timeUntilMoveAgain = seconds;
     }
     

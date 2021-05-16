@@ -9,7 +9,8 @@ public class Mouse : MonoBehaviour
     [SerializeField] float _maxDistanceFromCamera;
     [SerializeField] float _slapStunDuration;
     [SerializeField] Animator _animator;
-    
+
+    AudioSource _audioSource;
     Camera _camera;
     float _depth;
     RaycastHit _hit;
@@ -18,6 +19,7 @@ public class Mouse : MonoBehaviour
     void Start()
     {
         _camera = Camera.main;
+        _audioSource = GetComponent<AudioSource>();
         if (_distanceFromObject == 0)
         {
             _distanceFromObject = 2;
@@ -35,7 +37,9 @@ public class Mouse : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            _audioSource.Play();
             _ray = _camera.ScreenPointToRay(Input.mousePosition);
+            
             if (_hit.collider != null && _hit.collider.gameObject.CompareTag("Hiker"))
             {
                 Hiker hiker = _hit.collider.GetComponent<Hiker>();
