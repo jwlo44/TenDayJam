@@ -32,16 +32,15 @@ public class Mouse : MonoBehaviour
 
     void Update()
     {
-        // Check to see if you are clicking on a hiker
         if (Input.GetMouseButtonDown(0))
         {
             _ray = _camera.ScreenPointToRay(Input.mousePosition);
-            if (_hit.collider != null &&_hit.collider.gameObject.CompareTag("Hiker"))
+            if (_hit.collider != null && _hit.collider.gameObject.CompareTag("Hiker"))
             {
                 Hiker hiker = _hit.collider.GetComponent<Hiker>();
                 hiker.SlapMe(_slapStunDuration);
 
-                Debug.Log("Clicked on a hiker");
+                // Debug.Log("Clicked on a hiker");
             }
         }        
     }
