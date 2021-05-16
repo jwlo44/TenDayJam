@@ -8,6 +8,7 @@ public class Mouse : MonoBehaviour
     [SerializeField] float _distanceFromObject;
     [SerializeField] float _maxDistanceFromCamera;
     [SerializeField] float _slapStunDuration;
+    [SerializeField] Animator _animator;
     
     Camera _camera;
     float _depth;
@@ -39,8 +40,7 @@ public class Mouse : MonoBehaviour
             {
                 Hiker hiker = _hit.collider.GetComponent<Hiker>();
                 hiker.SlapMe(_slapStunDuration);
-
-                // Debug.Log("Clicked on a hiker");
+                _animator.SetBool("Slap", true);
             }
         }        
     }
