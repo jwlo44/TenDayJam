@@ -10,11 +10,13 @@ public class Hiker : MonoBehaviour
     [SerializeField] AudioClip _slapReact;
     [SerializeField] AudioClip _spawn;
 
+    Animator _animator;
     AudioSource _audioSource;
     float _timeUntilMoveAgain = 0f;
     
     void Start()
     {
+        _animator = GetComponentInChildren<Animator>();
         _audioSource = GetComponent<AudioSource>();
         _audioSource.clip = _spawn;
         if (_hikeSpeed <= 0)
@@ -33,6 +35,10 @@ public class Hiker : MonoBehaviour
     {
         if (ShouldGoUp())
             GoUpTheMountain();
+        else
+        {
+            _animator.SetBool("Idle", true);
+        }
     }
 
     bool ShouldGoUp()
@@ -42,6 +48,7 @@ public class Hiker : MonoBehaviour
 
     void GoUpTheMountain()
     {
+        _animator.SetBool("Idle", false);
         transform.position = Vector3.MoveTowards(transform.position, _mountainTop.position, _hikeSpeed * PauseTimeManager.deltaTime);
     }
 
