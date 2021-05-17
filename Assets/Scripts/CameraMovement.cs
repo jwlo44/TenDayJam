@@ -5,12 +5,17 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    [SerializeField] Transform _target;
-    
-    Camera _camera;
-    
-    void Start()
+    [SerializeField] float _rotateSpeed = 2;
+
+    private void Update()
     {
-        _camera = GetComponent<Camera>();
+        if (Input.GetKey("a"))
+        {
+            transform.Rotate(0, _rotateSpeed * Time.deltaTime, 0);
+        }
+        else if (Input.GetKey("d"))
+        {
+            transform.Rotate(0, -_rotateSpeed * Time.deltaTime, 0);
+        }
     }
 }
