@@ -2,10 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour
 {
     [SerializeField] float _spawnFrequency;
+    [SerializeField] Transform _hikerHolder;
+    [SerializeField] Hiker _hiker;
     
     Transform[] _spawners;
     Hiker[] _hikers;
@@ -41,7 +44,11 @@ public class Spawner : MonoBehaviour
     void SpawnHiker()
     {
         // Pick a random spawn point
+        int spawner = Random.Range(0, _spawners.Length);
+
         // Spawn a hiker at that position
+        Instantiate(_hiker, _spawners[spawner].position, Quaternion.identity, _hikerHolder);
+        
         // And add that hiker to the list of hikers
     }
 }
