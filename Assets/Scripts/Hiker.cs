@@ -17,6 +17,11 @@ public class Hiker : MonoBehaviour
     
     void Start()
     {
+        
+    }
+
+    private void Awake()
+    {
         _animator = GetComponentInChildren<Animator>();
         _audioSource = GetComponent<AudioSource>();
         _audioSource.clip = _spawn;
@@ -26,6 +31,7 @@ public class Hiker : MonoBehaviour
         {
             _hikeSpeed = 1;
         }
+        _audioSource.Play();
     }
 
     void Update()
