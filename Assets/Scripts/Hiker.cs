@@ -13,12 +13,15 @@ public class Hiker : MonoBehaviour
     Animator _animator;
     AudioSource _audioSource;
     float _timeUntilMoveAgain = 0f;
+    Vector3 _startPosition;
     
     void Start()
     {
         _animator = GetComponentInChildren<Animator>();
         _audioSource = GetComponent<AudioSource>();
         _audioSource.clip = _spawn;
+        _startPosition = GetComponent<Transform>().position;
+
         if (_hikeSpeed <= 0)
         {
             _hikeSpeed = 1;
@@ -34,10 +37,14 @@ public class Hiker : MonoBehaviour
     void FixedUpdate()
     {
         if (ShouldGoUp())
+        {
             GoUpTheMountain();
+            _animator.SetBool("Climbing", true);
+        }
         else
         {
-            _animator.SetBool("Idle", true);
+            SlideDownTheMountain();
+            _animator.SetBool("Climbing", false);
         }
     }
 
@@ -48,8 +55,14 @@ public class Hiker : MonoBehaviour
 
     void GoUpTheMountain()
     {
-        _animator.SetBool("Idle", false);
-        transform.position = Vector3.MoveTowards(transform.position, _mountainTop.position, _hikeSpeed * PauseTimeManager.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, _mountainTop.position, 
+            _hikeSpeed * PauseTimeManager.deltaTime);
+    }
+
+    void SlideDownTheMountain()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, _startPosition, 
+            _hikeSpeed * 2 * PauseTimeManager.deltaTime);
     }
 
     public void SlapMe(float seconds)

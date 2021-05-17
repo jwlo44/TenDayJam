@@ -6860,6 +6860,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1873893467}
     - target: {fileID: 7527505784964319918, guid: 280f9c3cc442c1e4b9d243e58027ce40, type: 3}
+      propertyPath: _slapStunDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527505784964319918, guid: 280f9c3cc442c1e4b9d243e58027ce40, type: 3}
       propertyPath: _distanceFromObject
       value: 4
       objectReference: {fileID: 0}
