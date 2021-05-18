@@ -13,6 +13,7 @@ public class Hiker : MonoBehaviour
     [SerializeField] GameObject _rotateTarget;
     [SerializeField] GameObject _vfx;
     [SerializeField] float _maxHeight;
+    [SerializeField] float _fallDownMagnitude = 3;
     
     Animator _animator;
     AudioSource _audioSource;
@@ -79,7 +80,7 @@ public class Hiker : MonoBehaviour
     void SlideDownTheMountain()
     {
         transform.position = Vector3.MoveTowards(transform.position, _startPosition, 
-            _hikeSpeed * 2 * PauseTimeManager.deltaTime);
+            _hikeSpeed * _fallDownMagnitude * PauseTimeManager.deltaTime);
     }
 
     public void SlapMe(float seconds)
