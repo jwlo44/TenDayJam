@@ -39,6 +39,7 @@ public class GameOver : MonoBehaviour
         gameObject.GetComponent<OpenPauseMenu>().enabled = false;
         GameOverScreen.SetActive(true);
         PauseMenu.SetActive(false);
+        PauseTimeManager.localTimeScale = 1 - PauseTimeManager.localTimeScale;
     }
 
     void WinTime()
@@ -48,5 +49,6 @@ public class GameOver : MonoBehaviour
         gameObject.GetComponent<OpenPauseMenu>().enabled = false;
         WinScreen.SetActive(true);
         PauseMenu.SetActive(false);
+        PauseTimeManager.localTimeScale = 1 - PauseTimeManager.localTimeScale;
     }
 }

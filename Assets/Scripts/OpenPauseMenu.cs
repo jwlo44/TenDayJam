@@ -25,12 +25,10 @@ public class OpenPauseMenu : MonoBehaviour
         MainMenu.SetActive(!MainMenu.activeSelf);
         PauseMenu.SetActive(PauseMenu.activeSelf);
         PauseTimeManager.localTimeScale = 1 - PauseTimeManager.localTimeScale;
-        AudioListener.pause = !AudioListener.pause;
     }
 
     void OnDestroy()
     {
         PauseTimeManager.localTimeScale = 1;
-        AudioListener.pause = false;
     }
 }
