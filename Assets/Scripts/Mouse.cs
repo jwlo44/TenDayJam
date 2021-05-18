@@ -9,7 +9,8 @@ public class Mouse : MonoBehaviour
     [SerializeField] float _maxDistanceFromCamera;
     [SerializeField] float _slapStunDuration;
     [SerializeField] Animator _animator;
-
+    [SerializeField] GameObject _lookTarget;
+    
     AudioSource _audioSource;
     Camera _camera;
     float _depth;
@@ -53,6 +54,7 @@ public class Mouse : MonoBehaviour
     {
         UpdateDepth();
         transform.position = GetWorldPosition(_camera, _depth);
+        transform.LookAt(_lookTarget.transform);
     }
 
     void UpdateDepth()

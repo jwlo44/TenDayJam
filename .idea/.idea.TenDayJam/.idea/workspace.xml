@@ -10,16 +10,19 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4D9F7249-F1DE-41E3-8466-8FEA10E9822F/63/42df3a9c/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hole.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/MouseOver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Mouse.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Hiker.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Hiker.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Mouse.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Hole.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sJQvmjhWXm6KYG9obVFTYpNqvJ" />
