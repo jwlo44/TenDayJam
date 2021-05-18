@@ -7148,6 +7148,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7527505784964319918, guid: 280f9c3cc442c1e4b9d243e58027ce40, type: 3}
+      propertyPath: _transformAnimator
+      value: 
+      objectReference: {fileID: 798634569}
+    - target: {fileID: 7527505784964319918, guid: 280f9c3cc442c1e4b9d243e58027ce40, type: 3}
       propertyPath: _distanceFromObject
       value: 4
       objectReference: {fileID: 0}
@@ -7213,6 +7217,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 280f9c3cc442c1e4b9d243e58027ce40, type: 3}
+--- !u!95 &798634569 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4766753967402319728, guid: 280f9c3cc442c1e4b9d243e58027ce40, type: 3}
+  m_PrefabInstance: {fileID: 798634568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &809238417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8544,11 +8553,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2685174437224721421, guid: becec3609e980e94db28baa713a62cdf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 56.1
+      value: 59.51
       objectReference: {fileID: 0}
     - target: {fileID: 2685174437224721421, guid: becec3609e980e94db28baa713a62cdf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.67
       objectReference: {fileID: 0}
     - target: {fileID: 2685174437224721421, guid: becec3609e980e94db28baa713a62cdf, type: 3}
       propertyPath: m_LocalRotation.w
