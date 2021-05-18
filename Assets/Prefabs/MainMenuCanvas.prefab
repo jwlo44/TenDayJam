@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4c13a215be98c468bb963b95d42b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToLoad: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+  _sceneIndexToLoad: 0
 --- !u!1 &1469194280976752619
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4c13a215be98c468bb963b95d42b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToLoad: {fileID: 102900000, guid: c2ebc73323bbe89488855fc825c2ebd6, type: 3}
+  _sceneIndexToLoad: 1
 --- !u!1 &2483318094568049605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4c13a215be98c468bb963b95d42b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToLoad: {fileID: 102900000, guid: c2ebc73323bbe89488855fc825c2ebd6, type: 3}
+  _sceneIndexToLoad: 1
 --- !u!1 &3307388427352963662
 GameObject:
   m_ObjectHideFlags: 0
@@ -2053,7 +2053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4c13a215be98c468bb963b95d42b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToLoad: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+  _sceneIndexToLoad: 0
 --- !u!1 &5116380763692699788
 GameObject:
   m_ObjectHideFlags: 0
