@@ -12,7 +12,9 @@ public class Hiker : MonoBehaviour
     [SerializeField] GameObject _lookTarget;
     [SerializeField] GameObject _rotateTarget;
     [SerializeField] GameObject _vfx;
-
+    [SerializeField] float _maxHeight = 40;
+    
+    
     Animator _animator;
     AudioSource _audioSource;
     float _timeUntilMoveAgain = 0f;
@@ -60,6 +62,11 @@ public class Hiker : MonoBehaviour
         if (AtTheTop())
         {
             _vfx.SetActive(true);
+        }
+
+        if (transform.position.y >= _maxHeight)
+        {
+            _rig.GetChild(0).GetComponent<SkinnedMeshRenderer>().enabled = false;
         }
     }
 
