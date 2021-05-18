@@ -7,6 +7,8 @@ public class GameOver : MonoBehaviour
 {
     [SerializeField] GameObject GameOverScreen;
     [SerializeField] GameObject WinScreen;
+    [SerializeField] GameObject MainMenu;
+    [SerializeField] GameObject PauseMenu;
     [SerializeField] Spawner _spawner;
     [SerializeField] Hole _hole;
 
@@ -33,12 +35,18 @@ public class GameOver : MonoBehaviour
     void GameOverTime()
     {
         gameEnded = true;
+        MainMenu.SetActive(true);
+        gameObject.GetComponent<OpenPauseMenu>().enabled = false;
         GameOverScreen.SetActive(true);
+        PauseMenu.SetActive(false);
     }
 
     void WinTime()
     {
         gameEnded = true;
+        MainMenu.SetActive(true);
+        gameObject.GetComponent<OpenPauseMenu>().enabled = false;
         WinScreen.SetActive(true);
+        PauseMenu.SetActive(false);
     }
 }

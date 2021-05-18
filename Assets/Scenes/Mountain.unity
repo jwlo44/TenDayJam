@@ -2837,13 +2837,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290971878}
-  m_LocalRotation: {x: 0.24590021, y: 0.38619667, z: -0.10761009, w: 0.88249946}
-  m_LocalPosition: {x: -55.29, y: 65.1, z: -49.3}
+  m_LocalRotation: {x: 0.20629363, y: 0.38852915, z: -0.08969903, w: 0.8935559}
+  m_LocalPosition: {x: -62, y: 67, z: -55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1736073362}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 31.14, y: 47.27, z: 0}
+  m_LocalEulerAnglesHint: {x: 26, y: 47, z: 0}
 --- !u!1001 &297843550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11936,10 +11936,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 9189299244954354487, guid: 87ef96d6c6543524294d67496cd21a40, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9209335949517515367, guid: 87ef96d6c6543524294d67496cd21a40, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -17295,7 +17291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de417fc84988144e8f65da3b200ea15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenu: {fileID: 1067211678}
+  PauseMenu: {fileID: 938631359}
+  MainMenu: {fileID: 1067211678}
 --- !u!4 &1999421415
 Transform:
   m_ObjectHideFlags: 0
@@ -17324,6 +17321,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverScreen: {fileID: 1367164558}
   WinScreen: {fileID: 426190295}
+  MainMenu: {fileID: 1067211678}
+  PauseMenu: {fileID: 938631359}
   _spawner: {fileID: 482725187}
   _hole: {fileID: 1913231212}
 --- !u!114 &2002398206 stripped
