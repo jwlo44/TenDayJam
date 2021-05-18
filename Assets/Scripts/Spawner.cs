@@ -53,4 +53,14 @@ public class Spawner : MonoBehaviour
         // And add that hiker to the list of hikers
         _hikers.Add(tempHiker);
     }
+
+    public bool AnyHikersUp()
+    {
+        foreach (Hiker hiker in _hikers)
+        {
+            if (hiker.AtTheTop())
+                return true;
+        }
+        return false;
+    }
 }

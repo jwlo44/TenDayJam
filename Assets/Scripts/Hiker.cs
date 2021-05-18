@@ -80,5 +80,9 @@ public class Hiker : MonoBehaviour
         _audioSource.Play();
         _timeUntilMoveAgain = seconds;
     }
-    
+
+    public bool AtTheTop()
+    {
+        return (transform.position == _mountainTop.position);
+    }
 }
