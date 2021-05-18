@@ -11,7 +11,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] Hiker _hiker;
     
     Transform[] _spawners;
-    Hiker[] _hikers;
+    List<Hiker> _hikers;
     float _countdownToSpawn = 0;
     
     void Awake()
@@ -20,6 +20,7 @@ public class Spawner : MonoBehaviour
             _spawnFrequency = 10f;
         
         _spawners = GetComponentsInChildren<Transform>();
+        _hikers = new List<Hiker>();
     }
 
     void Update()
@@ -47,8 +48,19 @@ public class Spawner : MonoBehaviour
         int spawner = Random.Range(0, _spawners.Length);
 
         // Spawn a hiker at that position
-        Instantiate(_hiker, _spawners[spawner].position, Quaternion.identity, _hikerHolder);
+        Hiker tempHiker = Instantiate(_hiker, _spawners[spawner].position, Quaternion.identity, _hikerHolder);
         
         // And add that hiker to the list of hikers
+        _hikers.Add(tempHiker);
+    }
+
+    public bool AnyHikersUp()
+    {
+        foreach (Hiker hiker in _hikers)
+        {
+            if (hiker.AtTheTop())
+                return true;
+        }
+        return false;
     }
 }
