@@ -14,6 +14,7 @@ public class Hiker : MonoBehaviour
     AudioSource _audioSource;
     float _timeUntilMoveAgain = 0f;
     Vector3 _startPosition;
+    Transform _godHole;
 
     private void Awake()
     {
@@ -21,6 +22,8 @@ public class Hiker : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _audioSource.clip = _spawn;
         _startPosition = GetComponent<Transform>().position;
+        
+        _godhole = find
 
         if (_hikeSpeed <= 0)
         {
@@ -51,7 +54,7 @@ public class Hiker : MonoBehaviour
 
     bool ShouldGoUp()
     {
-        return _mountainTop != null && _timeUntilMoveAgain <= 0;
+        return _mountainTop != null && _timeUntilMoveAgain <= 0 ;
     }
 
     void GoUpTheMountain()
