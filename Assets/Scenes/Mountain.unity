@@ -11928,8 +11928,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 9189299244954354487, guid: 87ef96d6c6543524294d67496cd21a40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87ef96d6c6543524294d67496cd21a40, type: 3}
+--- !u!1 &1367164558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9189299244954354487, guid: 87ef96d6c6543524294d67496cd21a40, type: 3}
+  m_PrefabInstance: {fileID: 1367164557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1390546736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17254,8 +17263,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1999421415}
   - component: {fileID: 1999421414}
+  - component: {fileID: 1999421416}
   m_Layer: 0
-  m_Name: Controller
+  m_Name: UI Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17288,6 +17298,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1999421416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999421413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc24f4feee003d748833b216ad2b57ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameOverScreen: {fileID: 1367164558}
 --- !u!114 &2002398206 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7047252241083843055, guid: b2133725a6b3e4b42b0e0ca41cbda562, type: 3}
