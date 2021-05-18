@@ -11,6 +11,7 @@ public class Hiker : MonoBehaviour
     [SerializeField] AudioClip _spawn;
     [SerializeField] GameObject _lookTarget;
     [SerializeField] GameObject _rotateTarget;
+    [SerializeField] GameObject _vfx;
 
     Animator _animator;
     AudioSource _audioSource;
@@ -54,6 +55,11 @@ public class Hiker : MonoBehaviour
         {
             SlideDownTheMountain();
             _animator.SetBool("Climbing", false);
+        }
+
+        if (AtTheTop())
+        {
+            _vfx.SetActive(true);
         }
     }
 
