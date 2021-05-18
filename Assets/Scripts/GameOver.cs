@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
-    public GameObject GameOverScreen;
-
+    [SerializeField] GameObject GameOverScreen;
+    [SerializeField] GameObject WinScreen;
     [SerializeField] Spawner _spawner;
     [SerializeField] Hole _hole;
 
@@ -24,13 +24,20 @@ public class GameOver : MonoBehaviour
         {
             // Game Over WIN
             Debug.Log("YOU WIN");
-            GameOverTime();
+            WinTime();
         }
     }
 
     void GameOverTime()
     {
         GameOverScreen.SetActive(!GameOverScreen.activeSelf);
+        PauseTimeManager.localTimeScale = 1 - PauseTimeManager.localTimeScale;
+        AudioListener.pause = !AudioListener.pause;
+    }
+
+    void WinTime()
+    {
+        WinScreen.SetActive(!WinScreen.activeSelf);
         PauseTimeManager.localTimeScale = 1 - PauseTimeManager.localTimeScale;
         AudioListener.pause = !AudioListener.pause;
     }
