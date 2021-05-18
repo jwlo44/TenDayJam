@@ -29,5 +29,6 @@ public class OpenPauseMenu : MonoBehaviour
     void OnDestroy()
     {
         PauseTimeManager.localTimeScale = 1;
+        AudioListener.pause = false;
     }
 }
