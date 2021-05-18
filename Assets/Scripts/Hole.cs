@@ -22,4 +22,9 @@ public class Hole : MonoBehaviour
                 _holeSpeed * PauseTimeManager.deltaTime);
         }
     }
+
+    public bool HoleUp()
+    {
+        return (transform.position == _destination);
+    }
 }
