@@ -12,8 +12,7 @@ public class Hiker : MonoBehaviour
     [SerializeField] GameObject _lookTarget;
     [SerializeField] GameObject _rotateTarget;
     [SerializeField] GameObject _vfx;
-    [SerializeField] float _maxHeight = 40;
-    
+    [SerializeField] float _maxHeight;
     
     Animator _animator;
     AudioSource _audioSource;
