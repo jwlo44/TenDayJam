@@ -9,8 +9,8 @@ public class Spawner : MonoBehaviour
     [SerializeField] float _spawnFrequency;
     [SerializeField] Transform _hikerHolder;
     [SerializeField] Hiker _hiker;
-    
-    Transform[] _spawners;
+    [SerializeField] Transform[] _spawners;
+
     List<Hiker> _hikers;
     float _countdownToSpawn = 0;
     
@@ -19,7 +19,6 @@ public class Spawner : MonoBehaviour
         if (_spawnFrequency == 0)
             _spawnFrequency = 10f;
         
-        _spawners = GetComponentsInChildren<Transform>();
         _hikers = new List<Hiker>();
     }
 

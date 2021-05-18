@@ -4998,6 +4998,15 @@ MonoBehaviour:
   _spawnFrequency: 3
   _hikerHolder: {fileID: 1947877527}
   _hiker: {fileID: 2002398206}
+  _spawners:
+  - {fileID: 1003494668}
+  - {fileID: 357402449}
+  - {fileID: 1279449454}
+  - {fileID: 761256176}
+  - {fileID: 285958590}
+  - {fileID: 1599699195}
+  - {fileID: 1078888076}
+  - {fileID: 19721758}
 --- !u!1001 &484716765
 PrefabInstance:
   m_ObjectHideFlags: 0
