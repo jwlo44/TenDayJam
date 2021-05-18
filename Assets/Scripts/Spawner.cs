@@ -14,12 +14,12 @@ public class Spawner : MonoBehaviour
     Hiker[] _hikers;
     float _countdownToSpawn = 0;
     
-    void Start()
+    void Awake()
     {
-        _spawners = GetComponentsInChildren<Transform>();
-
         if (_spawnFrequency == 0)
             _spawnFrequency = 10f;
+        
+        _spawners = GetComponentsInChildren<Transform>();
     }
 
     void Update()

@@ -18,10 +18,10 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/MouseOver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Mouse.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Hole.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Hiker.cs" />
     </changedPaths>
   </component>

@@ -9,12 +9,15 @@ public class Hiker : MonoBehaviour
     [SerializeField] Transform _mountainTop;
     [SerializeField] AudioClip _slapReact;
     [SerializeField] AudioClip _spawn;
+    [SerializeField] GameObject _lookTarget;
+    [SerializeField] GameObject _rotateTarget;
 
     Animator _animator;
     AudioSource _audioSource;
     float _timeUntilMoveAgain = 0f;
     Vector3 _startPosition;
     GameObject _godHole;
+    Transform _rig;
 
     private void Awake()
     {
@@ -23,7 +26,9 @@ public class Hiker : MonoBehaviour
         _audioSource.clip = _spawn;
         _startPosition = GetComponent<Transform>().position;
         _godHole = GameObject.Find("GodHole");
-        
+        _rig = gameObject.transform.GetChild(0);
+        _rig.LookAt(_rotateTarget.transform);
+
 
         if (_hikeSpeed <= 0)
         {
@@ -40,6 +45,7 @@ public class Hiker : MonoBehaviour
 
     void FixedUpdate()
     {
+        _rig.LookAt(_lookTarget.transform);
         if (ShouldGoUp())
         {
             GoUpTheMountain();
