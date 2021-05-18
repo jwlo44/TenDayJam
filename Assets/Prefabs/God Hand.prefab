@@ -93,7 +93,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7527505784964319919}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -113,7 +113,7 @@ MonoBehaviour:
   _distanceFromObject: 0.5
   _maxDistanceFromCamera: 0
   _slapStunDuration: 1
-  _animator: {fileID: 0}
+  _transformAnimator: {fileID: 0}
   _lookTarget: {fileID: 0}
 --- !u!82 &967652037242854187
 AudioSource:
