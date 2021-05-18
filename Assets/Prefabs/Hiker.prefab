@@ -81,7 +81,8 @@ MonoBehaviour:
   _mountainTop: {fileID: 0}
   _slapReact: {fileID: 8300000, guid: 2b5dd554f68376d45a22c46ad9ce669e, type: 3}
   _spawn: {fileID: 8300000, guid: 6f707ab0ababe9247b0a76fcf28526cb, type: 3}
-  _lookTarget: {fileID: 0}
+  _lookTarget: {fileID: 979717934527237130}
+  _rotateTarget: {fileID: 0}
 --- !u!136 &6169764501939042249
 CapsuleCollider:
   m_ObjectHideFlags: 0
