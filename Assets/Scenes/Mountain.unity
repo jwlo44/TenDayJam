@@ -4348,6 +4348,10 @@ PrefabInstance:
       propertyPath: _rotateTarget
       value: 
       objectReference: {fileID: 1864873883}
+    - target: {fileID: 7047252241083843055, guid: b2133725a6b3e4b42b0e0ca41cbda562, type: 3}
+      propertyPath: _fallDownMagnitude
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2133725a6b3e4b42b0e0ca41cbda562, type: 3}
 --- !u!1 &419870760 stripped
