@@ -4995,7 +4995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb55f5edd9852e4dab52c71157c3914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnFrequency: 2
+  _spawnFrequency: 3
   _hikerHolder: {fileID: 1947877527}
   _hiker: {fileID: 2002398206}
 --- !u!1001 &484716765
@@ -8778,7 +8778,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3196994461709332501, guid: 4445c1d40febe764382a826faeee08f3, type: 3}
       propertyPath: _delay
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4245673178880075445, guid: 4445c1d40febe764382a826faeee08f3, type: 3}
       propertyPath: m_RootOrder
