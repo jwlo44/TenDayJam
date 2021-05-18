@@ -6,15 +6,24 @@ public class GameOver : MonoBehaviour
 {
     public GameObject GameOverScreen;
 
-    // Update is called once per frame
+    [SerializeField] Spawner _spawner;
+    [SerializeField] Hole _hole;
+
     void Update()
     {
         if (GameOverScreen == null)
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (_spawner.AnyHikersUp())
         {
+            Debug.Log("YOU LOSE");
+            GameOverTime();
+        }
+        else if (_hole.HoleUp())
+        {
+            // Game Over WIN
+            Debug.Log("YOU WIN");
             GameOverTime();
         }
     }
