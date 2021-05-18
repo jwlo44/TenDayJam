@@ -58,13 +58,9 @@ public class Hiker : MonoBehaviour
             _animator.SetBool("Climbing", false);
         }
 
-        if (AtTheTop())
-        {
-            _vfx.SetActive(true);
-        }
-
         if (transform.position.y >= _maxHeight)
         {
+            _vfx.SetActive(true);
             _rig.GetChild(0).GetComponent<SkinnedMeshRenderer>().enabled = false;
         }
     }
