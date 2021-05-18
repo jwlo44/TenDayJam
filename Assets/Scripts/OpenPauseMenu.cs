@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenPauseMenu : MonoBehaviour
 {
     public GameObject PauseMenu;
+    public GameObject MainMenu;
 
     // Update is called once per frame
     void Update()
@@ -21,7 +22,8 @@ public class OpenPauseMenu : MonoBehaviour
 
     void Pause()
     {
-        PauseMenu.SetActive(!PauseMenu.activeSelf);
+        MainMenu.SetActive(!MainMenu.activeSelf);
+        PauseMenu.SetActive(PauseMenu.activeSelf);
         PauseTimeManager.localTimeScale = 1 - PauseTimeManager.localTimeScale;
         AudioListener.pause = !AudioListener.pause;
     }
