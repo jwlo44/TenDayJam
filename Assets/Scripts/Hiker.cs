@@ -27,8 +27,7 @@ public class Hiker : MonoBehaviour
         _startPosition = GetComponent<Transform>().position;
         _godHole = GameObject.Find("GodHole");
         _rig = gameObject.transform.GetChild(0);
-        _rig.LookAt(_rotateTarget.transform);
-
+        transform.LookAt(_rotateTarget.transform);
 
         if (_hikeSpeed <= 0)
         {
