@@ -9,6 +9,7 @@ public class Mouse : MonoBehaviour
     [SerializeField] float _maxDistanceFromCamera;
     [SerializeField] float _slapStunDuration;
     [SerializeField] Animator _transformAnimator;
+    [SerializeField] Animator _animator;
     [SerializeField] GameObject _lookTarget;
 
     AudioSource _audioSource;
@@ -41,6 +42,7 @@ public class Mouse : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _audioSource.Play();
+            _animator.SetTrigger("Slap");
             _randomSlapBool = new System.Random().Next(100) <= 50;
             if (_randomSlapBool)
             {
