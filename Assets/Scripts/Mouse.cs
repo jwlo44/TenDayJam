@@ -9,6 +9,7 @@ public class Mouse : MonoBehaviour
     [SerializeField] float _maxDistanceFromCamera;
     [SerializeField] float _slapStunDuration;
     [SerializeField] Animator _animator;
+    [SerializeField] Animator _transformAnimator;
     [SerializeField] GameObject _lookTarget;
     
     AudioSource _audioSource;
@@ -16,6 +17,7 @@ public class Mouse : MonoBehaviour
     float _depth;
     RaycastHit _hit;
     Ray _ray;
+    bool _randomSlapBool;
 
     void Start()
     {
@@ -46,6 +48,16 @@ public class Mouse : MonoBehaviour
                 Hiker hiker = _hit.collider.GetComponent<Hiker>();
                 hiker.SlapMe(_slapStunDuration);
                 _animator.SetBool("Slap", true);
+
+                _randomSlapBool = new System.Random().Next(100) <= 50;
+                if ( _randomSlapBool )
+                {
+                    _transformAnimator.SetTrigger("Slap");
+                }
+                else
+                {
+                    _transformAnimator.SetTrigger("BackSlap");
+                }
             }
         }        
     }
