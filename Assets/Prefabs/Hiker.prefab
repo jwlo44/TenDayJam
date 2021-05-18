@@ -85,6 +85,8 @@ MonoBehaviour:
   _spawn: {fileID: 8300000, guid: 6f707ab0ababe9247b0a76fcf28526cb, type: 3}
   _lookTarget: {fileID: 979717934527237130}
   _rotateTarget: {fileID: 0}
+  _vfx: {fileID: 0}
+  _maxHeight: 0
 --- !u!136 &6169764501939042249
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5143,7 +5145,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: a7f2f5ef149d3524aa875c7a47a31145, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
