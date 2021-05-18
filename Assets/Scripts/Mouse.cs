@@ -18,15 +18,14 @@ public class Mouse : MonoBehaviour
     RaycastHit _hit;
     Ray _ray;
     bool _randomSlapBool;
+	Collider _collider;
 
     void Start()
     {
+        _collider = GetComponent<Collider>();
+        _collider.enabled = false;
         _camera = Camera.main;
         _audioSource = GetComponent<AudioSource>();
-        if (_distanceFromObject == 0)
-        {
-            _distanceFromObject = 2;
-        }
 
         if (_slapStunDuration <= 0)
         {
@@ -40,27 +39,38 @@ public class Mouse : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            _audioSource.Play();
-            _ray = _camera.ScreenPointToRay(Input.mousePosition);
-            
-            if (_hit.collider != null && _hit.collider.gameObject.CompareTag("Hiker"))
+			 _randomSlapBool = new System.Random().Next(100) <= 50;
+            if ( _randomSlapBool )
             {
-                Hiker hiker = _hit.collider.GetComponent<Hiker>();
-                hiker.SlapMe(_slapStunDuration);
-                _animator.SetBool("Slap", true);
-
-                _randomSlapBool = new System.Random().Next(100) <= 50;
-                if ( _randomSlapBool )
-                {
-                    _transformAnimator.SetTrigger("Slap");
-                }
-                else
-                {
-                    _transformAnimator.SetTrigger("BackSlap");
-                }
+                _transformAnimator.SetTrigger("Slap");
             }
-        }        
+            else
+            {
+                _transformAnimator.SetTrigger("BackSlap");
+            }
+            _collider.enabled = true;
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            _collider.enabled = false;
+        }
     }
+
+     void OnTriggerEnter(Collider other)
+    {
+        if (other == null || !other.gameObject.CompareTag("Hiker"))
+        {
+            return;
+        }
+        Hiker hiker = other.GetComponent<Hiker>();
+        if (hiker == null)
+        {
+            return;
+        }
+		_audioSource.Play();
+        hiker.SlapMe(_slapStunDuration);
+    }
+
 
     void FixedUpdate()
     {
