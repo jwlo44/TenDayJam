@@ -8,17 +8,16 @@ public class Mouse : MonoBehaviour
     [SerializeField] float _distanceFromObject;
     [SerializeField] float _maxDistanceFromCamera;
     [SerializeField] float _slapStunDuration;
-    [SerializeField] Animator _animator;
     [SerializeField] Animator _transformAnimator;
     [SerializeField] GameObject _lookTarget;
-    
+
     AudioSource _audioSource;
     Camera _camera;
     float _depth;
     RaycastHit _hit;
     Ray _ray;
     bool _randomSlapBool;
-	Collider _collider;
+    Collider _collider;
 
     void Start()
     {
@@ -33,14 +32,17 @@ public class Mouse : MonoBehaviour
         }
 
         _depth = _distanceFromObject;
+        var slapAnimController = _transformAnimator.GetBehaviour<SlapAnimController>();
+        slapAnimController.OnIdle += OnSlapFinished;
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-			 _randomSlapBool = new System.Random().Next(100) <= 50;
-            if ( _randomSlapBool )
+            _audioSource.Play();
+            _randomSlapBool = new System.Random().Next(100) <= 50;
+            if (_randomSlapBool)
             {
                 _transformAnimator.SetTrigger("Slap");
             }
@@ -50,13 +52,9 @@ public class Mouse : MonoBehaviour
             }
             _collider.enabled = true;
         }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            _collider.enabled = false;
-        }
     }
 
-     void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other == null || !other.gameObject.CompareTag("Hiker"))
         {
@@ -67,10 +65,13 @@ public class Mouse : MonoBehaviour
         {
             return;
         }
-		_audioSource.Play();
         hiker.SlapMe(_slapStunDuration);
     }
 
+    void OnSlapFinished()
+    {
+        _collider.enabled = false;
+    }
 
     void FixedUpdate()
     {
