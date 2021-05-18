@@ -14,11 +14,6 @@ public class Hiker : MonoBehaviour
     AudioSource _audioSource;
     float _timeUntilMoveAgain = 0f;
     Vector3 _startPosition;
-    
-    void Start()
-    {
-        
-    }
 
     private void Awake()
     {
