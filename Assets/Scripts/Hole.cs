@@ -27,4 +27,9 @@ public class Hole : MonoBehaviour
     {
         return (transform.position == _destination);
     }
+
+    public float HoleVerticalPosition()
+    {
+        return transform.position.y;
+    }
 }

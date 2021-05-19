@@ -10,6 +10,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] Transform _hikerHolder;
     [SerializeField] Hiker _hiker;
     [SerializeField] Transform[] _spawners;
+    [SerializeField] Hole _hole;
 
     List<Hiker> _hikers;
     float _countdownToSpawn = 0;
@@ -32,6 +33,11 @@ public class Spawner : MonoBehaviour
 
     bool ShouldSpawn()
     {
+        if (_hole.HoleVerticalPosition() > 0)
+        {
+            return false;
+        }
+        
         if (_countdownToSpawn <= 0)
         {
             _countdownToSpawn = _spawnFrequency;

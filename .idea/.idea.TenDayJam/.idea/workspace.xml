@@ -12,7 +12,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameOver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4D9F7249-F1DE-41E3-8466-8FEA10E9822F/63/42df3a9c/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hole.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -22,12 +21,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MouseOver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Mouse.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Hole.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameOver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LoadScene.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Hiker.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Hole.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameOver.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sJQvmjhWXm6KYG9obVFTYpNqvJ" />
@@ -41,6 +40,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/Final - Windows\TenDayJam.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Projects\TenDayJam\Builds\Final - Windows" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />

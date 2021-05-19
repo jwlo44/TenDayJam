@@ -11,7 +11,9 @@ public class GameOver : MonoBehaviour
     [SerializeField] GameObject PauseMenu;
     [SerializeField] Spawner _spawner;
     [SerializeField] Hole _hole;
-
+    [SerializeField] AudioClip _gameOverMusic;
+    [SerializeField] AudioSource _bgMusicSource;
+    
     bool gameEnded = false;
     
     void Update()
@@ -34,6 +36,9 @@ public class GameOver : MonoBehaviour
 
     void GameOverTime()
     {
+        _bgMusicSource.clip = _gameOverMusic;
+        _bgMusicSource.loop = false;
+        _bgMusicSource.Play();
         gameEnded = true;
         MainMenu.SetActive(true);
         gameObject.GetComponent<OpenPauseMenu>().enabled = false;
